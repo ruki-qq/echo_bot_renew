@@ -1,8 +1,13 @@
+from os import getenv
+
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command
 from aiogram.types import Message
+from dotenv import load_dotenv
 
-BOT_TOKEN: str = "7095961209:AAHhlUYeUln9hpQfEaCX0N8JZFRcFCAYkIg"
+load_dotenv()
+
+BOT_TOKEN: str = getenv("BOT_TOKEN")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
